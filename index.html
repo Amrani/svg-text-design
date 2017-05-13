@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <style>
+    body {
+      background: #424651;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    .panel{
+      min-width: 300px;
+      min-height: 250px;
+      text-align: center;
+      margin: 0 auto;
+      padding-top: 150px;
+    }
+    .design-svg {
+      transform: scale(2);
+    }
+    .design-svg .text {
+      position: absolute;
+      fill: none;
+      stroke-width: 2;
+      stroke-linejoin: round;
+      stroke-dasharray: 70 330;
+      stroke-dashoffset: 0;
+      -webkit-animation: stroke 6s infinite linear;
+      -moz-animation: stroke 6s infinite linear;
+      animation: stroke 6s infinite linear;
+      font-size: 40px;
+    }
+    .design-svg .text:nth-child(5n + 1) {
+      stroke: #a4456f;
+      -webkit-animation-delay: -1.2s;
+      animation-delay: -1.2s;
+    }
+    .design-svg .text:nth-child(5n + 2) {
+      stroke: #126DA6;
+      -webkit-animation-delay: -2.4s;
+      animation-delay: -2.4s;
+    }
+    .design-svg .text:nth-child(5n + 3) {
+      stroke: #05F2F2;
+      -webkit-animation-delay: -3.6s;
+      animation-delay: -3.6s;
+    }
+    .design-svg .text:nth-child(5n + 4) {
+      stroke: #9e91a6;
+      -webkit-animation-delay: -4.8s;
+      animation-delay: -4.8s;
+    }    
+    .design-svg .text:nth-child(5n + 5) {
+      stroke: #9aa8bd;
+      -webkit-animation-delay: -6s;
+      animation-delay: -6s;
+    }
+    @-webkit-keyframes stroke {
+      100% {
+        stroke-dashoffset: -400;
+      }
+    }
+    @keyframes stroke {
+      100% {
+        stroke-dashoffset: -400;
+      }
+    }
+  </style>
+  <title>Document</title>
+</head>
+<body>
+  
+  <div class="panel">
+
+    <svg display="none" >
+      <symbol id="s-text" viewBox="0 0 127 54">
+        <text x="0%" y="50%" dy=".10em" >Design</text>
+      </symbol>
+    </svg>
+
+    <svg class="design-svg" height="54" width="127">
+      <use xlink:href="#s-text" class="text"></use>
+      <use xlink:href="#s-text" class="text"></use>
+      <use xlink:href="#s-text" class="text"></use>
+      <use xlink:href="#s-text" class="text"></use>
+      <use xlink:href="#s-text" class="text"></use>
+    </svg>
+
+  </div>
+
+</body>
+</html>
